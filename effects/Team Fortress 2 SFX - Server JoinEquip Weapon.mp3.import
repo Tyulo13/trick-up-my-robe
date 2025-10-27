@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fku7gr3oak6p"
+path="res://.godot/imported/Team Fortress 2 SFX - Server JoinEquip Weapon.mp3-2e2121bed7b629223055519a44e5edc2.mp3str"
+
+[deps]
+
+source_file="res://effects/Team Fortress 2 SFX - Server JoinEquip Weapon.mp3"
+dest_files=["res://.godot/imported/Team Fortress 2 SFX - Server JoinEquip Weapon.mp3-2e2121bed7b629223055519a44e5edc2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

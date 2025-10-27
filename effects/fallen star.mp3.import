@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwfafmhykimra"
+path="res://.godot/imported/fallen star.mp3-e77e1fa5d65688aeb424aea566ba67c4.mp3str"
+
+[deps]
+
+source_file="res://effects/fallen star.mp3"
+dest_files=["res://.godot/imported/fallen star.mp3-e77e1fa5d65688aeb424aea566ba67c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

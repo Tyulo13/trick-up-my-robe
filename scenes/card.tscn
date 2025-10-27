@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://bp8bell1ia18o"]
+
+[ext_resource type="Script" uid="uid://hw45154dns10" path="res://scripts/rigid_body_2d.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://cjvbvgqptfhqk" path="res://player/hands/cards/5H.png" id="2_ktuci"]
+[ext_resource type="Texture2D" uid="uid://buhj5r25elqrb" path="res://player/hands/cards/2D.png" id="3_6ligt"]
+[ext_resource type="AudioStream" uid="uid://crc82ov2esbih" path="res://effects/hitmarker.mp3" id="3_ktuci"]
+[ext_resource type="Texture2D" uid="uid://dp5b4wnp3naqh" path="res://player/hands/cards/6S.png" id="5_8w5pg"]
+[ext_resource type="Texture2D" uid="uid://d37hkpt3p2qhu" path="res://player/hands/cards/10C.png" id="6_nvopj"]
+[ext_resource type="Texture2D" uid="uid://bostwa4gfd421" path="res://player/hands/cards/AC.png" id="7_nvopj"]
+[ext_resource type="Texture2D" uid="uid://bi82g6s6wt2wv" path="res://player/hands/cards/KD.png" id="8_1yd6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e484p"]
+size = Vector2(4.00002, 5.99999)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yd6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6ligt")
+}],
+"loop": true,
+"name": &"a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ktuci")
+}],
+"loop": true,
+"name": &"b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8w5pg")
+}],
+"loop": true,
+"name": &"c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_nvopj")
+}],
+"loop": true,
+"name": &"d",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_nvopj")
+}],
+"loop": true,
+"name": &"e",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1yd6c")
+}],
+"loop": true,
+"name": &"f",
+"speed": 5.0
+}]
+
+[node name="Card" type="RigidBody2D"]
+z_index = 5
+collision_layer = 2
+collision_mask = 132
+gravity_scale = 0.0
+script = ExtResource("1_6u4wf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.19209e-07, -5.96046e-08)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_e484p")
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ktuci")
+volume_db = -17.924
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.005, 0.005)
+sprite_frames = SubResource("SpriteFrames_1yd6c")
+animation = &"f"

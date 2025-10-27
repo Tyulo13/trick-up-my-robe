@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce632h1glmxyu"]
+
+[ext_resource type="Texture2D" uid="uid://bnh8dweg225pw" path="res://ui/trickupmyrobe.jpg" id="1_5mbse"]
+[ext_resource type="Script" uid="uid://dyj240utwkptj" path="res://scenes/button.gd" id="2_r3g3c"]
+[ext_resource type="AudioStream" uid="uid://cpxtbq6u4axrt" path="res://effects/Evil Laugh Sound Effect.mp3" id="3_3vvtq"]
+[ext_resource type="AudioStream" uid="uid://dgxdxs6xosvcw" path="res://effects/Kevin MacLeod_ Not As It Seems.mp3" id="4_3vvtq"]
+
+[sub_resource type="Theme" id="Theme_natt5"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 705.0
+offset_bottom = 400.0
+texture = ExtResource("1_5mbse")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 232.0
+offset_right = 396.0
+offset_bottom = 276.0
+theme = SubResource("Theme_natt5")
+text = "play
+"
+script = ExtResource("2_r3g3c")
+
+[node name="Laugh" type="AudioStreamPlayer2D" parent="Button"]
+stream = ExtResource("3_3vvtq")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3vvtq")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

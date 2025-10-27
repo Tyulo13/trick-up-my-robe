@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://j4ed74rgytpj"
+path="res://.godot/imported/Item Pick up (Counter Strike Source) - Sound Effect for editing.mp3-226024e8f1052b7bf674a345ae4bad44.mp3str"
+
+[deps]
+
+source_file="res://effects/Item Pick up (Counter Strike Source) - Sound Effect for editing.mp3"
+dest_files=["res://.godot/imported/Item Pick up (Counter Strike Source) - Sound Effect for editing.mp3-226024e8f1052b7bf674a345ae4bad44.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

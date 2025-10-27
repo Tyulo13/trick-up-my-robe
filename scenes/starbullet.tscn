@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://6qbt4qg48gee"]
+
+[ext_resource type="Script" uid="uid://cklhjwyt8cboe" path="res://scripts/enemybullet.gd" id="1_uitej"]
+[ext_resource type="AudioStream" uid="uid://crc82ov2esbih" path="res://effects/hitmarker.mp3" id="2_fdogg"]
+[ext_resource type="Texture2D" uid="uid://c3cnc6jp60n2r" path="res://enemies/star.png" id="3_uitej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e484p"]
+size = Vector2(4.00002, 5.99999)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uitej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_uitej")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StarBullet" type="RigidBody2D"]
+z_index = 5
+texture_filter = 1
+collision_layer = 16
+collision_mask = 137
+gravity_scale = 0.0
+script = ExtResource("1_uitej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_e484p")
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_fdogg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_uitej")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpxtbq6u4axrt"
+path="res://.godot/imported/Evil Laugh Sound Effect.mp3-4777f08df31e7e12bf1eef4124f63fc6.mp3str"
+
+[deps]
+
+source_file="res://effects/Evil Laugh Sound Effect.mp3"
+dest_files=["res://.godot/imported/Evil Laugh Sound Effect.mp3-4777f08df31e7e12bf1eef4124f63fc6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

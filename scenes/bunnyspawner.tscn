@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ooousa2yrbfc"]
+
+[ext_resource type="Script" uid="uid://dnjppoet7upuw" path="res://scripts/bunnyspawner.gd" id="1_5rj1u"]
+[ext_resource type="Texture2D" uid="uid://dl3c1d81ptbx2" path="res://decorations/bunny.png" id="2_8rhnm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_653le"]
+radius = 7.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_5rj1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_8rhnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_653le")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

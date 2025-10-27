@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgxdxs6xosvcw"
+path="res://.godot/imported/Kevin MacLeod_ Not As It Seems.mp3-607af9bc7076b30961c7d5b6d6ec0075.mp3str"
+
+[deps]
+
+source_file="res://effects/Kevin MacLeod_ Not As It Seems.mp3"
+dest_files=["res://.godot/imported/Kevin MacLeod_ Not As It Seems.mp3-607af9bc7076b30961c7d5b6d6ec0075.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

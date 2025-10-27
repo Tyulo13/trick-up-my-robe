@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dquligi2e3kas"]
+
+[ext_resource type="Script" uid="uid://coewhrb2ru7no" path="res://cardstack.gd" id="1_wg3vb"]
+[ext_resource type="Texture2D" uid="uid://dy6v71g0p6yp5" path="res://decorations/cardstack.png" id="2_nwu1t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wghlj"]
+radius = 7.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_wg3vb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_nwu1t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_wghlj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
